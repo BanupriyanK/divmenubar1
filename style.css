@@ -1,0 +1,58 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+div
+{
+  background-color: orange;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+div li
+{
+   font-size: 50px;
+   list-style-type: none;
+}
+div li:last-child
+{
+  display: none;
+}
+@media (max-width: 750px)
+{
+  div
+  {
+    background-color: lightpink;
+    color: white;
+    flex-direction: column;
+ }
+  div li 
+  {
+    border: 1px solid;
+    width: 110%;
+    text-align: center;
+  }
+
+  div li:last-child
+ {
+  display: none;
+ }
+
+ @media (max-width: 375px)
+ {
+  div li:not(div li:last-child)
+  {
+    display: none;
+  }
+  div li:last-child
+  {
+    display: block;
+  }
+ }
+}
+
+
